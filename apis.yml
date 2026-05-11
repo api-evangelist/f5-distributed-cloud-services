@@ -1,0 +1,71 @@
+aid: f5-distributed-cloud-services
+name: F5 Distributed Cloud Services
+description: >-
+  F5 Distributed Cloud Services (F5 XC) is a SaaS-based platform providing
+  distributed multi-cloud application security, networking, and edge
+  infrastructure including web application and API protection (WAAP), DDoS
+  mitigation, bot defense, multi-cloud networking, DNS, load balancing, and
+  edge compute across F5's global private backbone. The platform's REST API
+  exposes 200+ resource types covering HTTP/TCP/UDP load balancers, security
+  policies, certificate management, cloud connectors, and observability,
+  authenticated via API tokens and service credentials managed in the F5
+  Distributed Cloud Console.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Application Security
+  - Web Application Firewall
+  - API Security
+  - Multi-Cloud Networking
+  - DDoS Protection
+  - Bot Defense
+  - Load Balancing
+  - Edge Compute
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/f5-distributed-cloud-services/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: f5-distributed-cloud-services:platform-api
+    name: F5 Distributed Cloud Services API
+    description: >-
+      Comprehensive REST API for managing F5 Distributed Cloud Services
+      including load balancers, WAF/WAAP policies, API security, DNS, origin
+      pools, certificates, cloud site connectors, and observability resources.
+      Authentication uses API tokens or service credentials issued from the
+      F5 Distributed Cloud Console.
+    humanURL: https://docs.cloud.f5.com/docs-v2/api
+    baseURL: https://console.ves.volterra.io/api
+    tags:
+      - Application Security
+      - Web Application Firewall
+      - API Security
+      - Multi-Cloud Networking
+      - Load Balancing
+      - DNS
+      - Edge Compute
+    properties:
+      - type: Documentation
+        url: https://docs.cloud.f5.com/docs-v2/api
+      - type: Getting Started
+        url: https://docs.cloud.f5.com/docs-v2/platform/tutorials/automation
+      - type: Authentication
+        url: https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials
+
+common:
+  - type: Website
+    url: https://www.f5.com/products/distributed-cloud-services
+  - type: Documentation
+    url: https://docs.cloud.f5.com/docs-v2
+  - type: Pricing
+    url: https://www.f5.com/products/distributed-cloud-services
+  - type: Sign Up
+    url: https://www.f5.com/trials/distributed-cloud-services
+  - type: Console
+    url: https://console.ves.volterra.io
+  - type: Support
+    url: https://my.f5.com/manage/s/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

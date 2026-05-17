@@ -48,7 +48,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.cloud.f5.com/docs-v2/api
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.cloud.f5.com/docs-v2/platform/tutorials/automation
       - type: Authentication
         url: https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials
@@ -60,7 +60,7 @@ common:
     url: https://docs.cloud.f5.com/docs-v2
   - type: Pricing
     url: https://www.f5.com/products/distributed-cloud-services
-  - type: Sign Up
+  - type: SignUp
     url: https://www.f5.com/trials/distributed-cloud-services
   - type: Console
     url: https://console.ves.volterra.io

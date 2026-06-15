@@ -1,0 +1,2369 @@
+{
+  "item": [
+    {
+      "id": "0e7e4d80-a2b1-4ad2-bbf6-9958226cad0a",
+      "name": "List namespaces",
+      "request": {
+        "name": "List namespaces",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f5c599a9-86a9-462b-8a79-fc54684e25e8",
+          "name": "Namespace collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7c2a03f9-200f-4513-8b6c-9758160c8877",
+      "name": "Create a namespace",
+      "request": {
+        "name": "Create a namespace",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"labels\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"spec\": \"<object>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0707af33-fd2f-4949-a7fc-d34bae865ffb",
+          "name": "Namespace created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"labels\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"spec\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8874c9ba-e67c-428c-b27b-2a96136d4205",
+      "name": "Get a namespace",
+      "request": {
+        "name": "Get a namespace",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "56aefc59-f84f-4ef5-bf23-e65dc1899443",
+          "name": "Namespace",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "97c48782-020b-4980-82c6-0cc1413347ab",
+      "name": "Delete a namespace",
+      "request": {
+        "name": "Delete a namespace",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "bf64e9c9-0077-4a96-985f-74264c819616",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3dae17f9-50da-400f-ade5-93e7747ee6c5",
+      "name": "List HTTP load balancers",
+      "request": {
+        "name": "List HTTP load balancers",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "http_loadbalancers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "62678f5e-f621-4a0e-b4af-eb0c2f9525a3",
+          "name": "HTTP LB collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "http_loadbalancers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e6fa01fa-90d6-46cf-9755-11179549d81d",
+      "name": "Create an HTTP load balancer",
+      "request": {
+        "name": "Create an HTTP load balancer",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "http_loadbalancers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"namespace\": \"<string>\"\n  },\n  \"spec\": {\n    \"domains\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"http\": \"<object>\",\n    \"https\": \"<object>\",\n    \"default_route_pools\": [\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      },\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      }\n    ]\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "8afac9c6-4b0b-4299-ac81-057162a865e5",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "http_loadbalancers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"namespace\": \"<string>\"\n  },\n  \"spec\": {\n    \"domains\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"http\": \"<object>\",\n    \"https\": \"<object>\",\n    \"default_route_pools\": [\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      },\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5e76c290-f315-4a33-bd27-9caaebbf46cc",
+      "name": "Get an HTTP load balancer",
+      "request": {
+        "name": "Get an HTTP load balancer",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "http_loadbalancers",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) Resource name"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "09b54897-bf05-4114-9142-e387dfb6ec12",
+          "name": "Object",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "http_loadbalancers",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Resource name"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7f0e993b-da0e-4fe8-9eb7-76766ad0238f",
+      "name": "Replace an HTTP load balancer",
+      "request": {
+        "name": "Replace an HTTP load balancer",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "http_loadbalancers",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) Resource name"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"namespace\": \"<string>\"\n  },\n  \"spec\": {\n    \"domains\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"http\": \"<object>\",\n    \"https\": \"<object>\",\n    \"default_route_pools\": [\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      },\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      }\n    ]\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "5158c697-3958-4910-a233-5f4a1882a67f",
+          "name": "Replaced",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "http_loadbalancers",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Resource name"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metadata\": {\n    \"name\": \"<string>\",\n    \"namespace\": \"<string>\"\n  },\n  \"spec\": {\n    \"domains\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"http\": \"<object>\",\n    \"https\": \"<object>\",\n    \"default_route_pools\": [\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      },\n      {\n        \"pool\": {\n          \"name\": \"<string>\",\n          \"namespace\": \"<string>\"\n        }\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ada40531-359a-43b8-8501-0884c8064ac3",
+      "name": "Delete an HTTP load balancer",
+      "request": {
+        "name": "Delete an HTTP load balancer",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "http_loadbalancers",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) Resource name"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "22419119-33e1-4613-afbd-16164605f8d1",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "http_loadbalancers",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Resource name"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b07a5502-49d6-4b1c-934f-e4855ecb97f5",
+      "name": "List TCP load balancers",
+      "request": {
+        "name": "List TCP load balancers",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "tcp_loadbalancers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3e05c3ef-14f7-48a0-92a5-6757f6117377",
+          "name": "TCP LB collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "tcp_loadbalancers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5d582d00-4746-461e-b88c-e813cc8b2c3f",
+      "name": "Create a TCP load balancer",
+      "request": {
+        "name": "Create a TCP load balancer",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "tcp_loadbalancers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "27a965e8-7295-485c-9052-2b81379cb6ba",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "tcp_loadbalancers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "26ee7878-5b15-44d8-a04a-9d1073ebfb76",
+      "name": "List origin pools",
+      "request": {
+        "name": "List origin pools",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "origin_pools"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a3968adf-1934-41b0-b2fe-8f789ebc329a",
+          "name": "Origin pool collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "origin_pools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "96a69374-0dcc-4e5a-87e7-d6b6e61f0db6",
+      "name": "Create an origin pool",
+      "request": {
+        "name": "Create an origin pool",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "origin_pools"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "c0ece89b-bf1e-4849-9523-48ccc011426c",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "origin_pools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d2a602fc-c0e0-4ceb-95a8-7d0badf20bfe",
+      "name": "Get an origin pool",
+      "request": {
+        "name": "Get an origin pool",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "origin_pools",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) Resource name"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "dd37deea-109e-47ea-9c40-12fa3e305f5f",
+          "name": "Object",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "origin_pools",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Resource name"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3caf04e8-6146-4d58-9979-30b52c85032b",
+      "name": "Delete an origin pool",
+      "request": {
+        "name": "Delete an origin pool",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "origin_pools",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) Resource name"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a9cc5481-f4ca-4c71-ac2d-a8a21148bd88",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "origin_pools",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Resource name"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "79cf15e9-af3d-4934-a951-04bdb2cbc5e4",
+      "name": "List WAF/WAAP application firewalls",
+      "request": {
+        "name": "List WAF/WAAP application firewalls",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "app_firewalls"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "65b51f7a-c040-4e2b-b11e-3ed542c55474",
+          "name": "WAF collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "app_firewalls"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "929a7818-3b8d-4fe4-9fb3-0056cd9d2a6c",
+      "name": "Create an application firewall policy",
+      "request": {
+        "name": "Create an application firewall policy",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "app_firewalls"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "d1071ec9-a8f3-47b9-8647-0029916d77b2",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "app_firewalls"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "56181cda-7ede-4e55-a757-7f639636c430",
+      "name": "List TLS certificates",
+      "request": {
+        "name": "List TLS certificates",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "certificates"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "9586794c-94c3-4db0-90bf-1cdcda15c105",
+          "name": "Certificate collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "certificates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7b1aa13e-a277-4d18-afb9-2de78b44a5c4",
+      "name": "Upload a TLS certificate",
+      "request": {
+        "name": "Upload a TLS certificate",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "certificates"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "4a1888e3-656e-4a5d-8714-5a781f3bd1aa",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "certificates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "6db234bb-e21c-430d-b292-60f3bdef11af",
+      "name": "List DNS domains",
+      "request": {
+        "name": "List DNS domains",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "config",
+            "namespaces",
+            ":namespace",
+            "dns_domains"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f4216f44-dd74-4087-ac7d-e39a9580c18f",
+          "name": "DNS domain collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "config",
+                "namespaces",
+                ":namespace",
+                "dns_domains"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "40cb54a6-66f4-4a80-a375-a1b8a6377d64",
+      "name": "List sites (observability)",
+      "request": {
+        "name": "List sites (observability)",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "data",
+            "namespaces",
+            ":namespace",
+            "sites"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "namespace",
+              "description": "(Required) F5 XC namespace"
+            },
+            {
+              "description": "Tenant subdomain",
+              "type": "any",
+              "value": "{{tenant}}",
+              "key": "tenant"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c44c1e1d-7bc3-4c46-993c-138e9489d36f",
+          "name": "Sites",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "data",
+                "namespaces",
+                ":namespace",
+                "sites"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Tenant subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "tenant",
+      "key": "tenant"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenant}}.console.ves.volterra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ac913de0-aafc-491d-8aa8-d186413f5862",
+    "name": "F5 Distributed Cloud Services API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS\nplatform for multi-cloud application security, networking, and edge\ncompute. Most configuration resources live under\n/api/config/namespaces/{namespace}/{resource} and observability under\n/api/data/. Authentication uses an API token or service credentials\nminted in the F5 Distributed Cloud Console, sent in the\nAuthorization header as \"APIToken {token}\".\n\n\nContact Support:\n Name: F5 Distributed Cloud Docs",
+      "type": "text/plain"
+    }
+  }
+}

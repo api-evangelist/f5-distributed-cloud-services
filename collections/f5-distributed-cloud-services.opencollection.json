@@ -1,0 +1,459 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "F5 Distributed Cloud Services API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List namespaces",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces"
+      },
+      "docs": "List namespaces"
+    },
+    {
+      "info": {
+        "name": "Create a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a namespace"
+    },
+    {
+      "info": {
+        "name": "Get a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "Get a namespace"
+    },
+    {
+      "info": {
+        "name": "Delete a namespace",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "Delete a namespace"
+    },
+    {
+      "info": {
+        "name": "List HTTP load balancers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/http_loadbalancers",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List HTTP load balancers"
+    },
+    {
+      "info": {
+        "name": "Create an HTTP load balancer",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/http_loadbalancers",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create an HTTP load balancer"
+    },
+    {
+      "info": {
+        "name": "Get an HTTP load balancer",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/http_loadbalancers/:name",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path",
+            "description": "Resource name"
+          }
+        ]
+      },
+      "docs": "Get an HTTP load balancer"
+    },
+    {
+      "info": {
+        "name": "Replace an HTTP load balancer",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/http_loadbalancers/:name",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path",
+            "description": "Resource name"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Replace an HTTP load balancer"
+    },
+    {
+      "info": {
+        "name": "Delete an HTTP load balancer",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/http_loadbalancers/:name",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path",
+            "description": "Resource name"
+          }
+        ]
+      },
+      "docs": "Delete an HTTP load balancer"
+    },
+    {
+      "info": {
+        "name": "List TCP load balancers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/tcp_loadbalancers",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List TCP load balancers"
+    },
+    {
+      "info": {
+        "name": "Create a TCP load balancer",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/tcp_loadbalancers",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a TCP load balancer"
+    },
+    {
+      "info": {
+        "name": "List origin pools",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/origin_pools",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List origin pools"
+    },
+    {
+      "info": {
+        "name": "Create an origin pool",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/origin_pools",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create an origin pool"
+    },
+    {
+      "info": {
+        "name": "Get an origin pool",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/origin_pools/:name",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path",
+            "description": "Resource name"
+          }
+        ]
+      },
+      "docs": "Get an origin pool"
+    },
+    {
+      "info": {
+        "name": "Delete an origin pool",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/origin_pools/:name",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path",
+            "description": "Resource name"
+          }
+        ]
+      },
+      "docs": "Delete an origin pool"
+    },
+    {
+      "info": {
+        "name": "List WAF/WAAP application firewalls",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/app_firewalls",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List WAF/WAAP application firewalls"
+    },
+    {
+      "info": {
+        "name": "Create an application firewall policy",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/app_firewalls",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create an application firewall policy"
+    },
+    {
+      "info": {
+        "name": "List TLS certificates",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/certificates",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List TLS certificates"
+    },
+    {
+      "info": {
+        "name": "Upload a TLS certificate",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/certificates",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Upload a TLS certificate"
+    },
+    {
+      "info": {
+        "name": "List DNS domains",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/config/namespaces/:namespace/dns_domains",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List DNS domains"
+    },
+    {
+      "info": {
+        "name": "List sites (observability)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{tenant}.console.ves.volterra.io/api/data/namespaces/:namespace/sites",
+        "params": [
+          {
+            "name": "namespace",
+            "value": "",
+            "type": "path",
+            "description": "F5 XC namespace"
+          }
+        ]
+      },
+      "docs": "List sites (observability)"
+    }
+  ],
+  "bundled": true
+}

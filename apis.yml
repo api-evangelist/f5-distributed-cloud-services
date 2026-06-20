@@ -11,7 +11,7 @@ description: >-
   authenticated via API tokens and service credentials managed in the F5
   Distributed Cloud Console.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Application Security
   - Web Application Firewall

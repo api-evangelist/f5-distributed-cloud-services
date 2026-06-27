@@ -62,7 +62,7 @@ common:
     url: https://docs.cloud.f5.com/docs-v2
   - type: Pricing
     url: https://www.f5.com/products/distributed-cloud-services
-  - type: SignUp
+  - type: Signup
     url: https://www.f5.com/trials/distributed-cloud-services
   - type: Console
     url: https://console.ves.volterra.io

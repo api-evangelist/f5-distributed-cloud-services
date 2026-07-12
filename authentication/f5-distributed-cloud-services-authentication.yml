@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/f5-distributed-cloud-services-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: APIToken
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: |-
+    Send "Authorization: APIToken {token}" using a token issued from
+    the F5 Distributed Cloud Console (Personal Tokens or Service
+    Credentials).
+  sources:
+  - openapi/f5-distributed-cloud-services-openapi.yml

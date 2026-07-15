@@ -54,6 +54,8 @@ apis:
         url: https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/f5-distributed-cloud-services-agentic-access.yml
   - type: TrustCenter
     url: security/f5-distributed-cloud-services-trust-center.yml
   - type: DomainSecurity

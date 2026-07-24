@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: F5 Distributed Cloud Services Config Data API
+  description: 'Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS
+
+    platform for multi-cloud application security, networking, and edge
+
+    compute. Most configuration resources live under
+
+    /api/config/namespaces/{namespace}/{resource} and observability under
+
+    /api/data/. Authentication uses an API token or service credentials
+
+    minted in the F5 Distributed Cloud Console, sent in the
+
+    Authorization header as "APIToken {token}".
+
+    '
+  version: 1.0.0
+  contact:
+    name: F5 Distributed Cloud Docs
+    url: https://docs.cloud.f5.com/docs-v2/api
+servers:
+- url: https://{tenant}.console.ves.volterra.io
+  description: F5 Distributed Cloud Console (tenant)
+  variables:
+    tenant:
+      default: tenant
+      description: Tenant subdomain
+security:
+- APIToken: []
+tags:
+- name: Data
+paths:
+  /api/data/namespaces/{namespace}/sites:
+    parameters:
+    - $ref: '#/components/parameters/Namespace'
+    get:
+      summary: List sites (observability)
+      operationId: listSites
+      responses:
+        '200':
+          description: Sites
+      tags:
+      - Data
+components:
+  parameters:
+    Namespace:
+      name: namespace
+      in: path
+      required: true
+      schema:
+        type: string
+      description: F5 XC namespace
+  securitySchemes:
+    APIToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Send "Authorization: APIToken {token}" using a token issued from
+
+        the F5 Distributed Cloud Console (Personal Tokens or Service
+
+        Credentials).
+
+        '

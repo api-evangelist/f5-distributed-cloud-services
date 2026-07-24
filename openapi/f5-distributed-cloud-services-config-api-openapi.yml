@@ -1,32 +1,46 @@
 openapi: 3.1.0
 info:
-  title: F5 Distributed Cloud Services API
-  description: |
-    Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS
+  title: F5 Distributed Cloud Services Config API
+  description: 'Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS
+
     platform for multi-cloud application security, networking, and edge
+
     compute. Most configuration resources live under
+
     /api/config/namespaces/{namespace}/{resource} and observability under
+
     /api/data/. Authentication uses an API token or service credentials
+
     minted in the F5 Distributed Cloud Console, sent in the
+
     Authorization header as "APIToken {token}".
-  version: "1.0.0"
+
+    '
+  version: 1.0.0
   contact:
     name: F5 Distributed Cloud Docs
     url: https://docs.cloud.f5.com/docs-v2/api
 servers:
-  - url: https://{tenant}.console.ves.volterra.io
-    description: F5 Distributed Cloud Console (tenant)
-    variables:
-      tenant:
-        default: tenant
-        description: Tenant subdomain
+- url: https://{tenant}.console.ves.volterra.io
+  description: F5 Distributed Cloud Console (tenant)
+  variables:
+    tenant:
+      default: tenant
+      description: Tenant subdomain
+security:
+- APIToken: []
+tags:
+- name: Config
 paths:
   /api/config/namespaces:
     get:
       summary: List namespaces
       operationId: listNamespaces
       responses:
-        "200": { description: Namespace collection }
+        '200':
+          description: Namespace collection
+      tags:
+      - Config
     post:
       summary: Create a namespace
       operationId: createNamespace
@@ -34,30 +48,43 @@ paths:
         required: true
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/Namespace' }
+            schema:
+              $ref: '#/components/schemas/Namespace'
       responses:
-        "200": { description: Namespace created }
+        '200':
+          description: Namespace created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: Get a namespace
       operationId: getNamespace
       responses:
-        "200": { description: Namespace }
+        '200':
+          description: Namespace
+      tags:
+      - Config
     delete:
       summary: Delete a namespace
       operationId: deleteNamespace
       responses:
-        "200": { description: Deleted }
+        '200':
+          description: Deleted
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/http_loadbalancers:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List HTTP load balancers
       operationId: listHttpLoadBalancers
       responses:
-        "200": { description: HTTP LB collection }
+        '200':
+          description: HTTP LB collection
+      tags:
+      - Config
     post:
       summary: Create an HTTP load balancer
       operationId: createHttpLoadBalancer
@@ -65,18 +92,25 @@ paths:
         required: true
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/HttpLoadBalancer' }
+            schema:
+              $ref: '#/components/schemas/HttpLoadBalancer'
       responses:
-        "200": { description: Created }
+        '200':
+          description: Created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/http_loadbalancers/{name}:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
-      - $ref: '#/components/parameters/ObjectName'
+    - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/ObjectName'
     get:
       summary: Get an HTTP load balancer
       operationId: getHttpLoadBalancer
       responses:
-        "200": { description: Object }
+        '200':
+          description: Object
+      tags:
+      - Config
     put:
       summary: Replace an HTTP load balancer
       operationId: replaceHttpLoadBalancer
@@ -84,22 +118,32 @@ paths:
         required: true
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/HttpLoadBalancer' }
+            schema:
+              $ref: '#/components/schemas/HttpLoadBalancer'
       responses:
-        "200": { description: Replaced }
+        '200':
+          description: Replaced
+      tags:
+      - Config
     delete:
       summary: Delete an HTTP load balancer
       operationId: deleteHttpLoadBalancer
       responses:
-        "200": { description: Deleted }
+        '200':
+          description: Deleted
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/tcp_loadbalancers:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List TCP load balancers
       operationId: listTcpLoadBalancers
       responses:
-        "200": { description: TCP LB collection }
+        '200':
+          description: TCP LB collection
+      tags:
+      - Config
     post:
       summary: Create a TCP load balancer
       operationId: createTcpLoadBalancer
@@ -107,17 +151,24 @@ paths:
         required: true
         content:
           application/json:
-            schema: { type: object }
+            schema:
+              type: object
       responses:
-        "200": { description: Created }
+        '200':
+          description: Created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/origin_pools:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List origin pools
       operationId: listOriginPools
       responses:
-        "200": { description: Origin pool collection }
+        '200':
+          description: Origin pool collection
+      tags:
+      - Config
     post:
       summary: Create an origin pool
       operationId: createOriginPool
@@ -125,31 +176,44 @@ paths:
         required: true
         content:
           application/json:
-            schema: { type: object }
+            schema:
+              type: object
       responses:
-        "200": { description: Created }
+        '200':
+          description: Created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/origin_pools/{name}:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
-      - $ref: '#/components/parameters/ObjectName'
+    - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/ObjectName'
     get:
       summary: Get an origin pool
       operationId: getOriginPool
       responses:
-        "200": { description: Object }
+        '200':
+          description: Object
+      tags:
+      - Config
     delete:
       summary: Delete an origin pool
       operationId: deleteOriginPool
       responses:
-        "200": { description: Deleted }
+        '200':
+          description: Deleted
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/app_firewalls:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List WAF/WAAP application firewalls
       operationId: listAppFirewalls
       responses:
-        "200": { description: WAF collection }
+        '200':
+          description: WAF collection
+      tags:
+      - Config
     post:
       summary: Create an application firewall policy
       operationId: createAppFirewall
@@ -157,17 +221,24 @@ paths:
         required: true
         content:
           application/json:
-            schema: { type: object }
+            schema:
+              type: object
       responses:
-        "200": { description: Created }
+        '200':
+          description: Created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/certificates:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List TLS certificates
       operationId: listCertificates
       responses:
-        "200": { description: Certificate collection }
+        '200':
+          description: Certificate collection
+      tags:
+      - Config
     post:
       summary: Upload a TLS certificate
       operationId: createCertificate
@@ -175,67 +246,58 @@ paths:
         required: true
         content:
           application/json:
-            schema: { type: object }
+            schema:
+              type: object
       responses:
-        "200": { description: Created }
+        '200':
+          description: Created
+      tags:
+      - Config
   /api/config/namespaces/{namespace}/dns_domains:
     parameters:
-      - $ref: '#/components/parameters/Namespace'
+    - $ref: '#/components/parameters/Namespace'
     get:
       summary: List DNS domains
       operationId: listDnsDomains
       responses:
-        "200": { description: DNS domain collection }
-  /api/data/namespaces/{namespace}/sites:
-    parameters:
-      - $ref: '#/components/parameters/Namespace'
-    get:
-      summary: List sites (observability)
-      operationId: listSites
-      responses:
-        "200": { description: Sites }
+        '200':
+          description: DNS domain collection
+      tags:
+      - Config
 components:
   parameters:
     Namespace:
       name: namespace
       in: path
       required: true
-      schema: { type: string }
+      schema:
+        type: string
       description: F5 XC namespace
     ObjectName:
       name: name
       in: path
       required: true
-      schema: { type: string }
+      schema:
+        type: string
       description: Resource name
   schemas:
-    Namespace:
-      type: object
-      properties:
-        metadata:
-          type: object
-          properties:
-            name: { type: string }
-            description: { type: string }
-            labels:
-              type: object
-              additionalProperties: { type: string }
-        spec:
-          type: object
     HttpLoadBalancer:
       type: object
       properties:
         metadata:
           type: object
           properties:
-            name: { type: string }
-            namespace: { type: string }
+            name:
+              type: string
+            namespace:
+              type: string
         spec:
           type: object
           properties:
             domains:
               type: array
-              items: { type: string }
+              items:
+                type: string
             http:
               type: object
             https:
@@ -248,16 +310,35 @@ components:
                   pool:
                     type: object
                     properties:
-                      name: { type: string }
-                      namespace: { type: string }
+                      name:
+                        type: string
+                      namespace:
+                        type: string
+    Namespace:
+      type: object
+      properties:
+        metadata:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            labels:
+              type: object
+              additionalProperties:
+                type: string
+        spec:
+          type: object
   securitySchemes:
     APIToken:
       type: apiKey
       in: header
       name: Authorization
-      description: |
-        Send "Authorization: APIToken {token}" using a token issued from
+      description: 'Send "Authorization: APIToken {token}" using a token issued from
+
         the F5 Distributed Cloud Console (Personal Tokens or Service
+
         Credentials).
-security:
-  - APIToken: []
+
+        '

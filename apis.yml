@@ -11,7 +11,19 @@ description: >-
   authenticated via API tokens and service credentials managed in the F5
   Distributed Cloud Console.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/f5-distributed-cloud-services.png
 tags:
   - Application Security
   - Web Application Firewall
@@ -27,32 +39,50 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: f5-distributed-cloud-services:platform-api
-    name: F5 Distributed Cloud Services API
-    description: >-
-      Comprehensive REST API for managing F5 Distributed Cloud Services
-      including load balancers, WAF/WAAP policies, API security, DNS, origin
-      pools, certificates, cloud site connectors, and observability resources.
-      Authentication uses API tokens or service credentials issued from the
-      F5 Distributed Cloud Console.
-    humanURL: https://docs.cloud.f5.com/docs-v2/api
-    baseURL: https://console.ves.volterra.io/api
-    tags:
-      - Application Security
-      - Web Application Firewall
-      - API Security
-      - Multi-Cloud Networking
-      - Load Balancing
-      - DNS
-      - Edge Compute
-    properties:
-      - type: Documentation
-        url: https://docs.cloud.f5.com/docs-v2/api
-      - type: GettingStarted
-        url: https://docs.cloud.f5.com/docs-v2/platform/tutorials/automation
-      - type: Authentication
-        url: https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials
-
+- aid: f5-distributed-cloud-services:platform-api
+  name: F5 Distributed Cloud Services API
+  description: >-
+    Comprehensive REST API for managing F5 Distributed Cloud Services including load balancers, WAF/WAAP
+    policies, API security, DNS, origin pools, certificates, cloud site connectors, and observability
+    resources. Authentication uses API tokens or service credentials issued from the F5 Distributed Cloud
+    Console.
+  humanURL: https://docs.cloud.f5.com/docs-v2/api
+  baseURL: https://console.ves.volterra.io/api
+  tags:
+  - Application Security
+  - Web Application Firewall
+  - API Security
+  - Multi-Cloud Networking
+  - Load Balancing
+  - DNS
+  - Edge Compute
+  properties:
+  - type: Documentation
+    url: https://docs.cloud.f5.com/docs-v2/api
+  - type: GettingStarted
+    url: https://docs.cloud.f5.com/docs-v2/platform/tutorials/automation
+  - type: Authentication
+    url: https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials
+- aid: f5-distributed-cloud-services:f5-distributed-cloud-services-config-api
+  name: F5 Distributed Cloud Services Config API
+  description: The Config API from F5 Distributed Cloud Services — 10 operation(s) for config.
+  humanURL: https://docs.cloud.f5.com/docs-v2/api
+  baseURL: https://console.ves.volterra.io/api
+  tags:
+  - Config
+  properties:
+  - type: OpenAPI
+    url: openapi/f5-distributed-cloud-services-config-api-openapi.yml
+- aid: f5-distributed-cloud-services:f5-distributed-cloud-services-data-api
+  name: F5 Distributed Cloud Services Data API
+  description: The Data API from F5 Distributed Cloud Services — 1 operation(s) for data.
+  humanURL: https://docs.cloud.f5.com/docs-v2/api
+  baseURL: https://console.ves.volterra.io/api
+  tags:
+  - Data
+  properties:
+  - type: OpenAPI
+    url: openapi/f5-distributed-cloud-services-data-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/f5-distributed-cloud-services-agentic-access.yml

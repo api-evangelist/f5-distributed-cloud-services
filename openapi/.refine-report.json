@@ -1,0 +1,16 @@
+{
+  "provider": "f5-distributed-cloud-services",
+  "sources": [
+    "f5-distributed-cloud-services-config-api-openapi.yml",
+    "f5-distributed-cloud-services-data-api-openapi.yml"
+  ],
+  "outputs": [
+    "f5-distributed-cloud-services-config-api-openapi.yml",
+    "f5-distributed-cloud-services-data-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

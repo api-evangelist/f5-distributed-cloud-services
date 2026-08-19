@@ -1,0 +1,159 @@
+{
+  "item": [
+    {
+      "id": "aab083a3-b218-491f-95a2-3895fdb67884",
+      "name": "Data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "86aef09c-471f-4b7b-aa70-b0b5966fe19d",
+          "name": "List sites (observability)",
+          "request": {
+            "name": "List sites (observability)",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "data",
+                "namespaces",
+                ":namespace",
+                "sites"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "namespace",
+                  "description": "(Required) F5 XC namespace"
+                },
+                {
+                  "description": "Tenant subdomain",
+                  "type": "any",
+                  "value": "{{tenant}}",
+                  "key": "tenant"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2443389a-abbb-4f68-b651-32f62f148eb6",
+              "name": "Sites",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "data",
+                    "namespaces",
+                    ":namespace",
+                    "sites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "namespace",
+                      "description": "(Required) F5 XC namespace"
+                    },
+                    {
+                      "description": "Tenant subdomain",
+                      "type": "any",
+                      "value": "{{tenant}}",
+                      "key": "tenant"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Tenant subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "tenant",
+      "key": "tenant"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenant}}.console.ves.volterra.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8435d193-ef0f-4a7e-99a1-c2a5d4bb0698",
+    "name": "F5 Distributed Cloud Services Config Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS\nplatform for multi-cloud application security, networking, and edge\ncompute. Most configuration resources live under\n/api/config/namespaces/{namespace}/{resource} and observability under\n/api/data/. Authentication uses an API token or service credentials\nminted in the F5 Distributed Cloud Console, sent in the\nAuthorization header as \"APIToken {token}\".\n\n\nContact Support:\n Name: F5 Distributed Cloud Docs",
+      "type": "text/plain"
+    }
+  }
+}

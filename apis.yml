@@ -37,7 +37,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/f5-distributed-cloud-services/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: f5-distributed-cloud-services:platform-api
   name: F5 Distributed Cloud Services API

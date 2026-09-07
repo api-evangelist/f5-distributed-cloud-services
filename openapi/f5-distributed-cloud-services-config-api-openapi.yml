@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: F5 Distributed Cloud Services Config API
   description: 'Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS
@@ -265,22 +265,23 @@ paths:
       tags:
       - Config
 components:
-  parameters:
-    Namespace:
-      name: namespace
-      in: path
-      required: true
-      schema:
-        type: string
-      description: F5 XC namespace
-    ObjectName:
-      name: name
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Resource name
   schemas:
+    Namespace:
+      type: object
+      properties:
+        metadata:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            labels:
+              type: object
+              additionalProperties:
+                type: string
+        spec:
+          type: object
     HttpLoadBalancer:
       type: object
       properties:
@@ -314,22 +315,21 @@ components:
                         type: string
                       namespace:
                         type: string
+  parameters:
+    ObjectName:
+      name: name
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Resource name
     Namespace:
-      type: object
-      properties:
-        metadata:
-          type: object
-          properties:
-            name:
-              type: string
-            description:
-              type: string
-            labels:
-              type: object
-              additionalProperties:
-                type: string
-        spec:
-          type: object
+      name: namespace
+      in: path
+      required: true
+      schema:
+        type: string
+      description: F5 XC namespace
   securitySchemes:
     APIToken:
       type: apiKey

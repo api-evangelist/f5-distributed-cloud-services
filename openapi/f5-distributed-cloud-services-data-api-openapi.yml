@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: F5 Distributed Cloud Services Config Data API
   description: 'Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS

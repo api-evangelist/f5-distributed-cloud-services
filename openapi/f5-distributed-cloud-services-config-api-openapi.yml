@@ -13,9 +13,7 @@ info:
 
     minted in the F5 Distributed Cloud Console, sent in the
 
-    Authorization header as "APIToken {token}".
-
-    '
+    Authorization header as "APIToken {token}".'
   version: 1.0.0
   contact:
     name: F5 Distributed Cloud Docs
@@ -265,23 +263,22 @@ paths:
       tags:
       - Config
 components:
-  schemas:
+  parameters:
     Namespace:
-      type: object
-      properties:
-        metadata:
-          type: object
-          properties:
-            name:
-              type: string
-            description:
-              type: string
-            labels:
-              type: object
-              additionalProperties:
-                type: string
-        spec:
-          type: object
+      name: namespace
+      in: path
+      required: true
+      schema:
+        type: string
+      description: F5 XC namespace
+    ObjectName:
+      name: name
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Resource name
+  schemas:
     HttpLoadBalancer:
       type: object
       properties:
@@ -315,21 +312,22 @@ components:
                         type: string
                       namespace:
                         type: string
-  parameters:
-    ObjectName:
-      name: name
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Resource name
     Namespace:
-      name: namespace
-      in: path
-      required: true
-      schema:
-        type: string
-      description: F5 XC namespace
+      type: object
+      properties:
+        metadata:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            labels:
+              type: object
+              additionalProperties:
+                type: string
+        spec:
+          type: object
   securitySchemes:
     APIToken:
       type: apiKey

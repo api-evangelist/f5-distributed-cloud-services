@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: F5 Distributed Cloud Services Config Data API
+  title: F5 Distributed Cloud Services Data API
   description: 'Public REST API for F5 Distributed Cloud Services (F5 XC) - SaaS
 
     platform for multi-cloud application security, networking, and edge
@@ -13,9 +13,7 @@ info:
 
     minted in the F5 Distributed Cloud Console, sent in the
 
-    Authorization header as "APIToken {token}".
-
-    '
+    Authorization header as "APIToken {token}".'
   version: 1.0.0
   contact:
     name: F5 Distributed Cloud Docs

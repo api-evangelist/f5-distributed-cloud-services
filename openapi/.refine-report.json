@@ -1,8 +1,7 @@
 {
   "provider": "f5-distributed-cloud-services",
   "sources": [
-    "f5-distributed-cloud-services-config-api-openapi.yml",
-    "f5-distributed-cloud-services-data-api-openapi.yml"
+    "_original/f5-distributed-cloud-services-openapi.yml"
   ],
   "outputs": [
     "f5-distributed-cloud-services-config-api-openapi.yml",
@@ -12,9 +11,35 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "f5-distributed-cloud-services-config-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "f5-distributed-cloud-services-data-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "f5-distributed-cloud-services-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths DELETE /api/config/namespaces/{namespace} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/http_loadbalancers -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces/{namespace}/http_loadbalancers -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/http_loadbalancers/{name} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths PUT /api/config/namespaces/{namespace}/http_loadbalancers/{name} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths DELETE /api/config/namespaces/{namespace}/http_loadbalancers/{name} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/tcp_loadbalancers -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces/{namespace}/tcp_loadbalancers -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/origin_pools -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces/{namespace}/origin_pools -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/origin_pools/{name} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths DELETE /api/config/namespaces/{namespace}/origin_pools/{name} -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/app_firewalls -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces/{namespace}/app_firewalls -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/certificates -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths POST /api/config/namespaces/{namespace}/certificates -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/config/namespaces/{namespace}/dns_domains -> Config",
+    "f5-distributed-cloud-services-openapi.yml: tagged paths GET /api/data/namespaces/{namespace}/sites -> Data",
+    "f5-distributed-cloud-services-openapi.yml: declared missing tag: Config",
+    "f5-distributed-cloud-services-openapi.yml: declared missing tag: Data",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "f5-distributed-cloud-services-config-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "f5-distributed-cloud-services-data-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

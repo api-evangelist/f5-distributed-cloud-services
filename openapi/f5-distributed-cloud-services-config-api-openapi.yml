@@ -263,21 +263,6 @@ paths:
       tags:
       - Config
 components:
-  parameters:
-    Namespace:
-      name: namespace
-      in: path
-      required: true
-      schema:
-        type: string
-      description: F5 XC namespace
-    ObjectName:
-      name: name
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Resource name
   schemas:
     HttpLoadBalancer:
       type: object
@@ -328,6 +313,21 @@ components:
                 type: string
         spec:
           type: object
+  parameters:
+    ObjectName:
+      name: name
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Resource name
+    Namespace:
+      name: namespace
+      in: path
+      required: true
+      schema:
+        type: string
+      description: F5 XC namespace
   securitySchemes:
     APIToken:
       type: apiKey

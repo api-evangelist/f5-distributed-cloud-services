@@ -97,6 +97,9 @@ apis:
   - type: OpenAPI
     url: openapi/f5-distributed-cloud-services-data-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/f5-distributed-cloud-services-capability-edges.yml
+    name: F5 Distributed Cloud Services Business Capability Map
   - type: AgenticAccess
     url: agentic-access/f5-distributed-cloud-services-agentic-access.yml
   - type: TrustCenter

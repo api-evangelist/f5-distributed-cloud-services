@@ -279,6 +279,22 @@ components:
         type: string
       description: Resource name
   schemas:
+    Namespace:
+      type: object
+      properties:
+        metadata:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            labels:
+              type: object
+              additionalProperties:
+                type: string
+        spec:
+          type: object
     HttpLoadBalancer:
       type: object
       properties:
@@ -312,22 +328,6 @@ components:
                         type: string
                       namespace:
                         type: string
-    Namespace:
-      type: object
-      properties:
-        metadata:
-          type: object
-          properties:
-            name:
-              type: string
-            description:
-              type: string
-            labels:
-              type: object
-              additionalProperties:
-                type: string
-        spec:
-          type: object
   securitySchemes:
     APIToken:
       type: apiKey

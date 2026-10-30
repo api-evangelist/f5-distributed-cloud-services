@@ -1,4 +1,4 @@
-# F5 Distributed Cloud Services (f5-distributed-cloud-services)
+# F5 Distributed Cloud Services
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,104 @@
 
 F5 Distributed Cloud Services (F5 XC) is a SaaS-based platform providing distributed multi-cloud application security, networking, and edge infrastructure including web application and API protection (WAAP), DDoS mitigation, bot defense, multi-cloud networking, DNS, load balancing, and edge compute across F5's global private backbone. The platform's REST API exposes 200+ resource types covering HTTP/TCP/UDP load balancers, security policies, certificate management, cloud connectors, and observability, authenticated via API tokens and service credentials managed in the F5 Distributed Cloud Console.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/f5-distributed-cloud-services/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/f5-distributed-cloud-services/refs/heads/main/apis.yml)
+**Areas:** Application Security · Web Application Firewall · API Security · Multi-Cloud Networking · DDoS Protection · Bot Defense · Load Balancing · Edge Compute
 
-## Scope
+## F5 Distributed Cloud Services on APIs.io
 
-- **Type:** Index
+Everything profiled for F5 Distributed Cloud Services is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/f5-distributed-cloud-services/](https://apis.io/providers/f5-distributed-cloud-services/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Application Security
-- Web Application Firewall
-- API Security
-- Multi-Cloud Networking
-- DDoS Protection
-- Bot Defense
-- Load Balancing
-- Edge Compute
+- [F5 Distributed Cloud Services API](https://apis.io/apis/f5-distributed-cloud-services/platform-api/) — Comprehensive REST API for managing F5 Distributed Cloud Services including load balancers, WAF/WAAP policies, API security, DNS, origin pools,…
+- [F5 Distributed Cloud Services Config API](https://apis.io/apis/f5-distributed-cloud-services/f5-distributed-cloud-services-config-api/) — The Config API from F5 Distributed Cloud Services — 10 operation(s) for config.
+- [F5 Distributed Cloud Services Data API](https://apis.io/apis/f5-distributed-cloud-services/f5-distributed-cloud-services-data-api/) — The Data API from F5 Distributed Cloud Services — 1 operation(s) for data.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### F5 Distributed Cloud Services API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Comprehensive REST API for managing F5 Distributed Cloud Services including load balancers, WAF/WAAP policies, API security, DNS, origin pools, certificates, cloud site connectors, and observability resources. Authentication uses API tokens or service credentials issued from the F5 Distributed Cloud Console.
+- [F5 Distributed Cloud Services Agentic Access](https://apis.io/agentic-access/f5-distributed-cloud-services/f5-distributed-cloud-services-agentic-access/)
 
-- **Human URL:** [https://docs.cloud.f5.com/docs-v2/api](https://docs.cloud.f5.com/docs-v2/api)
-- **Base URL:** `https://console.ves.volterra.io/api`
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Application Security
-- Web Application Firewall
-- API Security
-- Multi-Cloud Networking
-- Load Balancing
-- DNS
-- Edge Compute
+- [F5 Distributed Cloud Services API](https://apis.io/collections/f5-distributed-cloud-services/open-f5-distributed-cloud-services/)
+- [F5 Distributed Cloud Services Config API](https://apis.io/collections/f5-distributed-cloud-services/open-f5-distributed-cloud-services-config-api/)
+- [F5 Distributed Cloud Services Config Data API](https://apis.io/collections/f5-distributed-cloud-services/open-f5-distributed-cloud-services-data-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://docs.cloud.f5.com/docs-v2/api)
-- [Getting Started](https://docs.cloud.f5.com/docs-v2/platform/tutorials/automation)
-- [Authentication](https://docs.cloud.f5.com/docs-v2/administration/how-tos/user-mgmt/credentials)
-- [Postman Collection](collections/f5-distributed-cloud-services.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/f5-distributed-cloud-services.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [F5 Distributed Cloud Services Authentication](https://apis.io/security/f5-distributed-cloud-services/f5-distributed-cloud-services-authentication/)
+- [F5 Distributed Cloud Services Domain Security](https://apis.io/security/f5-distributed-cloud-services/f5-distributed-cloud-services-domain-security/)
+- [F5 Distributed Cloud Services Trust Center](https://apis.io/security/f5-distributed-cloud-services/f5-distributed-cloud-services-trust-center/)
 
-- [GitHub Organization](https://github.com/f5devcentral)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.f5.com/products/distributed-cloud-services)
 - [Documentation](https://docs.cloud.f5.com/docs-v2)
 - [Pricing](https://www.f5.com/products/distributed-cloud-services)
-- [Sign Up](https://www.f5.com/trials/distributed-cloud-services)
-- [Console](https://console.ves.volterra.io)
 - [Support](https://my.f5.com/manage/s/)
+- [Blog](https://www.f5.com/company/blog)
+- [GitHub](https://github.com/f5devcentral)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 20.2 |
+| Access clarity | 31.6 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/f5-distributed-cloud-services/](https://apis.io/providers/f5-distributed-cloud-services/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for F5 Distributed Cloud Services: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/f5-distributed-cloud-services/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
